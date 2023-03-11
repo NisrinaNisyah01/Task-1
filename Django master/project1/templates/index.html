@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Halaman Utama</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
+</head>
+
+<body>
+
+    <img id="banner" src="{% static 'img/home.jpg' %}" alt="">
+    <h1>Halaman Utama</h1>
+    <div id="menu">
+        
+        <ul>
+            <li><a href="" class="">Home</a></li>
+            <li><a href="/about" class="">About</a></li>
+            <li><a href="/buku" class="">Buku</a></li>
+            <li><a href="/tamu" class="">Tamu</a></li>
+        </ul>
+    </div>
+
+<div class="container">
+    <br>
+    <div class="jumbotron">
+        <h1 class="dissplay -4">Selamat Datang di Kelas 4D Informatika</h1>
+        <p class="lead">Kelas 4D Informatika Mata Kuliah Python (Python)</p>
+    </div>
+</div>
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-dark">Copyright 2022</span>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src=""{% static 'vendor/bootstrap/bootstrap.js' %}" type="text/javascripts"></script>
+    <script src=""{% static 'vendor/bootstrap/jquery-3.3.1.slim.min.js' %}" type="text/javascripts"></script>
+    <script src=""{% static 'vendor/bootstrap/popper.min.js' %}" type="text/javascripts"></script>
+
+</body>
+
+</html>

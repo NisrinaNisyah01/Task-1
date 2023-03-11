@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tamu</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
+    
+</head>
+<body>
+
+    <img id="banner" src= "{% static 'img/home.jpg' %}" alt="">
+    <h1>Halaman Tamu</h1>
+    <div id="menu">
+        <ul>
+            <li><a href="/" class="">Home</a></li>
+            <li><a href="/about/" class="">About</a></li>
+            <li><a href="/buku/" class="">Buku</a></li>
+            <li><a href="/tamu" class="">Tamu</a></li>
+        </ul>
+    </div>
+    <!-- CONTAINER BOOTSTRAP-->
+    <!-- https://getbootstrap.com/docs/4.5/gettinng-started/introduction/ -->
+
+    <div class="container">
+        {% for TampungPost in TampungPostingan %}
+        <h3>{{TampungPost.judul}}</h3>
+        <p>{{TampungPost.sinopsis}}</p>
+        {% endfor %}
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <span class="text-dark">Copyright 2022</span>
+        </div>
+    </footer>
+    <!-- FOOTER -->
+
+    <!--JS BOOTSTRAP-->
+    <script src="{% static 'vendor/bootstrap/bootstrap.js' %}" type="text/javascripts"></script>
+    <script src="{% static 'vendor/bootstrap/jquery-3.3.1.slim.min.js' %}" type="text/javascripts"></script>
+    <script src="{% static 'vendor/bootstrap/popper.min.js' %}" type="text/javascripts"></script>
+
+
+</body>
+
+</html>
